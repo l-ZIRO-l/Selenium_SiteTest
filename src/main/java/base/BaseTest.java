@@ -19,7 +19,6 @@ public class BaseTest {
     @BeforeMethod
     public void setUp() {
         log.info("Starting drivers...");
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\CSE LAB 1\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
@@ -30,7 +29,7 @@ public class BaseTest {
     public void tearDown() {
         if (driver != null) {
             Log.warn("Closing Browser...");
-           driver.quit();
+           //driver.quit();
         }
     }
 }
